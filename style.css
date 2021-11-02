@@ -1,0 +1,101 @@
+body,
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.container {
+  margin: 50px 50px;
+}
+
+.container .product-label {
+  margin-bottom: 30px;
+}
+
+.container .product-label label {
+  color: rgb(192, 226, 43);
+  background-color: cadetblue;
+  padding: 15px 10px;
+  box-shadow: 3px 3px gray;
+}
+
+.container .product-label input {
+  width: 100%;
+  color: blue;
+  border: 2px solid cadetblue;
+}
+
+.container .product-label #productDesc {
+  width: 100%;
+  color: blue;
+  border: 2px solid cadetblue;
+}
+
+.container #btnadd {
+  color: rgb(192, 226, 43);
+  background-color: cadetblue;
+  padding: 15px 10px;
+  box-shadow: 3px 3px gray;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 50px;
+  gap: 15px;
+}
+
+.items .images {
+  position: relative;
+  margin: 100px auto;
+}
+
+.items .images h2 {
+  display: inline-block;
+  margin-right: 185px;
+  color: rgb(192, 226, 43);
+  background-color: cadetblue;
+  padding: 15px 10px;
+  box-shadow: 3px 3px gray;
+}
+
+.items .images span {
+  color: rgb(192, 226, 43);
+  background-color: cadetblue;
+  padding: 15px 10px;
+  box-shadow: 3px 3px gray;
+}
+
+.items .images p {
+  margin: 20px 0 10px;
+  text-align: center;
+  color: gray;
+}
+
+.items .images button:nth-child(6) {
+  color: rgb(192, 226, 43);
+  background-color: cadetblue;
+  padding: 15px 10px;
+  box-shadow: 3px 3px gray;
+  margin-left: 22%;
+}
+.items .images button:nth-child(7) {
+  color: rgb(192, 226, 43);
+  background-color: cadetblue;
+  padding: 15px 10px;
+  box-shadow: 3px 3px gray;
+  margin-left: 15px;
+}
+
+.items .images .price {
+  position: absolute;
+  top: 5px;
+  right: 80px;
+  color: rgb(192, 226, 43);
+  background-color: cadetblue;
+  padding: 15px 10px;
+  box-shadow: 3px 3px gray;
+}
