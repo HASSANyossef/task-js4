@@ -41,6 +41,15 @@ body,
   box-shadow: 3px 3px gray;
 }
 
+.container #btnedit {
+  color: rgb(192, 226, 43);
+  background-color: cadetblue;
+  padding: 15px 30px;
+  box-shadow: 3px 3px gray;
+  font-weight: bolder;
+  display: none;
+}
+
 .items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -55,7 +64,7 @@ body,
 
 .items .images h2 {
   display: inline-block;
-  margin-right: 185px;
+  margin-right: 50px;
   color: rgb(192, 226, 43);
   background-color: cadetblue;
   padding: 15px 10px;

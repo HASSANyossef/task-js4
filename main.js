@@ -1,5 +1,7 @@
 var btnadd= document.getElementById("btnadd");
+var btnedit= document.getElementById("btnedit");
 var productList= [];
+var remove= document.getElementsByClassName("remove");
 
 btnadd.onclick= function(){
     var productName= document.getElementById("productName").value;
@@ -15,8 +17,8 @@ btnadd.onclick= function(){
     }
 
     productList.push(product);
-    console.log(productList);
     displayImages();
+    removeInp();
 }
 
 function displayImages(){
@@ -32,13 +34,46 @@ function displayImages(){
                 `+productList[i].price+`
             </div>
             <button onclick="deletItem(`+i+`)">Dellet</button>
-            <button >update</button>
+            <button onclick= "updateItem(`+i+`)">update</button>
         </div>`
     }
         document.getElementById("allItems").innerHTML= temp;
+        
 }
 
 function deletItem(index){
     productList.splice(index,1);
     displayImages();
+}
+
+function updateItem(index){
+    document.getElementById("productName").value= productList[index].name;
+    document.getElementById("productPrice").value= productList[index].price;
+    document.getElementById("productCato").value= productList[index].catogery;
+    document.getElementById("productDesc").value= productList[index].descrption;
+
+    btnadd.style.display="none";
+    btnedit.style.display="block";
+    document.getElementById("indexnubmer").value= index;
+}
+
+
+btnedit.onclick= function(){
+    var x= document.getElementById("indexnubmer").value;
+
+    productList[x].name= document.getElementById("productName").value;
+    productList[x].price= document.getElementById("productPrice").value;
+    productList[x].catogery= document.getElementById("productCato").value;
+    productList[x].descrption= document.getElementById("productDesc").value;
+
+    btnadd.style.display="block";
+    btnedit.style.display="none";
+    displayImages();
+    removeInp();
+}
+
+function removeInp(){
+    for(var i=0; i<remove.length; i++){
+        remove[i].value ="";
+    }
 }

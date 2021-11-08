@@ -14,22 +14,24 @@
     <div class="container">
         <div class="product-label">
             <label for="productName">Product Name</label> <br><br>
-            <input type="text" id="productName">
+            <input type="text" id="productName" class="remove">
         </div>
         <div class="product-label">
             <label for="productPrice">Product Price</label><br><br>
-            <input type="text" id="productPrice">
+            <input type="text" id="productPrice" class="remove">
         </div>
         <div class="product-label">
             <label for="productCato">Product Catogery</label><br><br>
-            <input type="text" id="productCato">
+            <input type="text" id="productCato" class="remove">
         </div>
         <div class="product-label">
             <label for="productDesc">Product Descrption</label><br><br>
-            <textarea name="" id="productDesc" cols="30" rows="10"></textarea>
+            <textarea name="" class="remove" id="productDesc" cols="30" rows="10"></textarea>
         </div>
         <button id="btnadd">Add Product</button>
+        <button id="btnedit">Edit</button>
     </div>
+    <input type="hidden" id="indexnubmer">
 
     
     <div class="items" id="allItems">
